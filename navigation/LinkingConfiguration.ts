@@ -15,6 +15,21 @@ const linking: LinkingOptions<RootStackParamList> = {
     screens: {
       Root: {
         screens: {
+          Home: {
+            screens: {
+              Home: 'home'
+            }
+          },
+          Card: {
+            screens: {
+              Card: 'card'
+            }
+          },
+          Favorite: {
+            screens: {
+              Favorite: 'favorite'
+            }
+          },
           TabOne: {
             screens: {
               TabOneScreen: 'one',
@@ -25,6 +40,12 @@ const linking: LinkingOptions<RootStackParamList> = {
               TabTwoScreen: 'two',
             },
           },
+        },
+      },
+      Detail: {
+        path: 'item/:id',
+        parse: {
+          id: Number,
         },
       },
       Modal: 'modal',
